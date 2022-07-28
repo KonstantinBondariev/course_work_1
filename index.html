@@ -8,7 +8,9 @@
   <link rel="shortcut icon" href="assets/img/favicon.png" type="image/png">
   <!-- Подключаем шрифты Roboto и Roboto Slab c сервиса google -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;300;400;700&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;300;400;700&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet">
   <!-- Подключаем иконочный шрифт fontawesome -->
   <link rel="stylesheet" href="libs/@fortawesome/fontawesome-free/css/all.min.css">
   <!-- Подключаем наш основной стиль, с которым будем работать -->
@@ -18,7 +20,45 @@
 
 <body>
 
-  <!-- Код пишем здесь -->
+  <header class="header">
+    <div class="header-content">
+      <div class="header-content__container">
+        <h1 class="header-content__title">WE ARE REAL WEB-DEVELOPERS</h1>
+        <div class="header-content__btn">
+          <a class="btn btn--light" href="#">Learn more</a>
+          <a class="btn btn--light" href="#">Get started</a>
+        </div>
+      </div>
+    </div>
+    <div class="header-menu">
+      <div class="header-menu__container">
+        <div class="header-logo">
+          <a class="header-logo__link"><span class="header-logo__hightlighte">site</span><span>logo</span></a>
+        </div>
+        <nav class="header-navbar">
+          <div class="header-navbar__btn">
+            <div class="header-navbar__btn-row"></div>
+            <div class="header-navbar__btn-row"></div>
+            <div class="header-navbar__btn-row"></div>
+          </div>
+
+          <ul class="header-navbar__list">
+            <li class="header-navbar__item">
+              <a class="header-navbar__link" href="">Home</a>
+            </li>
+            <li class="header-navbar__item">
+              <a class="header-navbar__link" href="">About</a>
+            </li>
+            <li class="header-navbar__item">
+              <a class="header-navbar__link" href="">Contacts</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="header-overlay"></div>
+  </header>
+
 
   <!-- Подключаем библиотеку jquery, необходимую для работы нашего основного скрипта -->
   <script src="libs/jquery/dist/jquery.min.js"></script>
@@ -26,4 +66,5 @@
   <script src="assets/js/main.js"></script>
 
 </body>
+
 </html>
