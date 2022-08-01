@@ -1,0 +1,26 @@
+@use "../presets" as *;
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+html {
+  overflow-y: scroll;
+  font: $font-main;
+  font-size: $font-size;
+}
+body {  
+  color: $color-gray;
+  background-color: $color-light;
+  letter-spacing: 1px;
+}
+h1 {
+  letter-spacing: 5px;
+  font-size: 3.75 rem;
+  font-family: $font-header;
+  margin: 0;
+  }
+a {
+  text-decoration: none;
+  color: $color-light;
+}
