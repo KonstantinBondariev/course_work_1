@@ -1,0 +1,12 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+.btn {
+  width: 250px;;
+  height: 60px; ;
+  background-color: rgba($color: $color-light, $alpha: 0.1) ;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
