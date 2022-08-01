@@ -1,0 +1,17 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+
+.header-navbar {
+  &__btn {
+    display: none;
+  }
+  &__list {
+    @include unlist;
+    display: flex;
+  }
+  
+  &__link a {
+    color: $color-highlight;
+  }
+  
+}
