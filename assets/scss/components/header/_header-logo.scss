@@ -1,0 +1,18 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+
+.header-logo {
+  letter-spacing: 6px;
+  text-transform: uppercase;
+
+  font-size: 1.5rem;
+  font-weight: 400;
+
+  &__hightlighte {
+    display: inline-block;
+
+    padding: 16px 4px 16px 6px;
+
+    border: 3px solid $color-highlight ;
+  }
+}

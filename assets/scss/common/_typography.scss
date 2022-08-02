@@ -6,21 +6,27 @@
 }
 html {
   overflow-y: scroll;
-  font: $font-main;
+
+  font-family: $font-main;
   font-size: $font-size;
 }
-body {  
+body {
+  letter-spacing: 1px;
+
   color: $color-gray;
   background-color: $color-light;
-  letter-spacing: 1px;
 }
 h1 {
-  letter-spacing: 5px;
-  font-size: 3.75 rem;
-  font-family: $font-header;
   margin: 0;
-  }
+
+  letter-spacing: 4.5px; //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+  font-family: $font-header;
+  font-size: 3.75rem;
+  font-weight: 300;
+}
 a {
   text-decoration: none;
+
   color: $color-light;
 }

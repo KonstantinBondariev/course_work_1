@@ -6,12 +6,26 @@
     display: none;
   }
   &__list {
-    @include unlist;
     display: flex;
+
+    @include unlist;
   }
-  
+  &__item {
+    margin: $gap $gap-sm;
+  }
+  &__link {
+    display: block;
+
+    padding: $gap $gap-sm;
+
+    letter-spacing: 2px;
+
+    background-color: rgb(241, 237, 16);
+
+    font-size: 18px;
+    font-weight: 400;
+  }
   &__link a {
     color: $color-highlight;
   }
-  
 }

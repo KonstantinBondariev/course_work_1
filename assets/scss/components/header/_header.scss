@@ -3,15 +3,17 @@
 
 
 .header {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   min-height: 100vh;
+
+  color: $color-light;
   background-color: $color-primary;
   background-image: url(../img/img-header.png);
   background-position: center;
   background-size: cover;
-  color: $color-light;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-
- }
+}
