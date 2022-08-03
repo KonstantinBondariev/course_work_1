@@ -2,17 +2,26 @@
 @use "../../mixins" as *;
 
 .header-logo {
-  letter-spacing: 6px;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
 
   font-size: 1.5rem;
   font-weight: 400;
 
+  &__link {
+    display: block;
+
+    padding: $gap 0;
+  }
+
   &__hightlighte {
     display: inline-block;
 
-    padding: 16px 4px 16px 6px;
+    padding: 14px 1px 13px 5px;
 
     border: 3px solid $color-highlight ;
+  }
+  & span:nth-last-of-type(1) {
+    margin-right: 4px;
   }
 }

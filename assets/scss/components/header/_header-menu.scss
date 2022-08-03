@@ -4,12 +4,14 @@
   position: absolute;
   z-index: 2;
   top: 0;
+  right: 0;
+  left: 0;
   &__container {
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    width: 1340px; //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    padding-right: 0;
 
     @extend %container;
     gap: $gap;

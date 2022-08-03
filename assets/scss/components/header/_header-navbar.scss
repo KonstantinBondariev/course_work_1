@@ -2,11 +2,16 @@
 @use "../../mixins" as *;
 
 .header-navbar {
+  letter-spacing: 0.1em;
+
+
   &__btn {
     display: none;
   }
   &__list {
     display: flex;
+
+    margin-right: 10px;
 
     @include unlist;
   }
@@ -18,14 +23,15 @@
 
     padding: $gap $gap-sm;
 
-    letter-spacing: 2px;
-
-    background-color: rgb(241, 237, 16);
-
     font-size: 18px;
     font-weight: 400;
+    transition: color 0.5s;
+    &:hover  {
+      color: $color-accent;
+    }
   }
   &__link a {
     color: $color-highlight;
+    
   }
 }

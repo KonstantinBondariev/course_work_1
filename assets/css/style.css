@@ -332,10 +332,11 @@ body {
 
 h1 {
   margin: 0;
-  letter-spacing: 4.5px;
+  letter-spacing: 0.08em;
   font-family: "Roboto Slab", serif;
   font-size: 3.75rem;
   font-weight: 300;
+  line-height: 1.2em;
 }
 
 a {
@@ -368,8 +369,18 @@ a {
           justify-content: center;
   width: 250px;
   height: 60px;
+  padding: 0.5em 0.1em;
+  letter-spacing: 0.1em;
   border: 2px solid #ffffff;
   background-color: rgba(255, 255, 255, 0.1);
+  font-size: 1.125rem;
+  font-weight: 400;
+  -webkit-transition: background-color 0.5s;
+  -o-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+}
+.btn:hover, .btn:focus {
+  background-color: #d66926;
 }
 
 .header {
@@ -405,6 +416,8 @@ a {
   position: absolute;
   z-index: 2;
   top: 0;
+  right: 0;
+  left: 0;
 }
 .header-menu__container {
   display: -webkit-box;
@@ -416,22 +429,32 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 1340px;
+  padding-right: 0;
   gap: 20px;
 }
 
 .header-logo {
-  letter-spacing: 6px;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
   font-size: 1.5rem;
   font-weight: 400;
 }
+.header-logo__link {
+  display: block;
+  padding: 20px 0;
+}
 .header-logo__hightlighte {
   display: inline-block;
-  padding: 16px 4px 16px 6px;
+  padding: 14px 1px 13px 5px;
   border: 3px solid #d53d27;
 }
+.header-logo span:nth-last-of-type(1) {
+  margin-right: 4px;
+}
 
+.header-navbar {
+  letter-spacing: 0.1em;
+}
 .header-navbar__btn {
   display: none;
 }
@@ -439,6 +462,7 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-right: 10px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -449,10 +473,14 @@ a {
 .header-navbar__link {
   display: block;
   padding: 20px 10px;
-  letter-spacing: 2px;
-  background-color: rgb(241, 237, 16);
   font-size: 18px;
   font-weight: 400;
+  -webkit-transition: color 0.5s;
+  -o-transition: color 0.5s;
+  transition: color 0.5s;
+}
+.header-navbar__link:hover {
+  color: #d66926;
 }
 .header-navbar__link a {
   color: #d53d27;
@@ -461,10 +489,13 @@ a {
 .header-content {
   position: relative;
   z-index: 1;
+  top: 0;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
 }
 .header-content__title {
+  margin-bottom: 53px;
   text-align: center;
-  margin-bottom: 65px;
 }
 .header-content__acttions {
   display: -webkit-box;
