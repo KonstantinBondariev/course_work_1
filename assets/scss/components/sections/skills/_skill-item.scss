@@ -1,0 +1,8 @@
+.skils-item {
+  background-color: blue;
+}
+@for $i from 1 through 9 {
+  .skils-item:nth-of-type(#{$i}) {
+    grid-area: a#{$i}
+  }
+}
