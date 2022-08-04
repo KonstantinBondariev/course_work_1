@@ -3,13 +3,18 @@
 
 
 .skills {
+  padding: $gap-sm;
 
 &__container {
+  margin-bottom: 20px;
   display: grid;
   grid-template-areas: "a1 a1 a2 a3" "a4 a5 a5 a6" "a7 a8 a9 a6";
   grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: 33vh ;
+  grid-auto-rows: calc(33.3333vh - 13.3333px) ;
   gap: $gap-sm;
 }
-   
+  &__actions {
+    display: flex;
+    justify-content: center;
+  }  
 }

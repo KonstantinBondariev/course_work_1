@@ -5,20 +5,29 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
-  width: 250px;
   height: 60px;
+
   padding: 0.5em 0.1em;
 
   letter-spacing: 0.1em;
 
-  border: 2px solid $color-light;
-  background-color: rgba($color: $color-light, $alpha: 0.1) ;
+  
 
   font-size: 1.125rem;
-  font-weight: 400;;;
+  font-weight: 400;
   transition: background-color 0.5s;
-
+  &--light {
+    width: 250px;
+    
+    border: 2px solid $color-light;
+    background-color: rgba($color: $color-light, $alpha: 0.1) ;
+  }
+  &--primary{
+    width: 350px;
+    
+    border: 2px solid $color-primary;
+    background-color: rgba($color: $color-primary, $alpha: 0.8) ;
+  }
   &:hover,
   &:focus {
     background-color: $color-accent;

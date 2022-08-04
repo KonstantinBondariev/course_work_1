@@ -339,6 +339,13 @@ h1 {
   line-height: 1.2em;
 }
 
+h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+}
+
 a {
   text-decoration: none;
   color: #ffffff;
@@ -367,17 +374,24 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 250px;
   height: 60px;
   padding: 0.5em 0.1em;
   letter-spacing: 0.1em;
-  border: 2px solid #ffffff;
-  background-color: rgba(255, 255, 255, 0.1);
   font-size: 1.125rem;
   font-weight: 400;
   -webkit-transition: background-color 0.5s;
   -o-transition: background-color 0.5s;
   transition: background-color 0.5s;
+}
+.btn--light {
+  width: 250px;
+  border: 2px solid #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.btn--primary {
+  width: 350px;
+  border: 2px solid #2d3651;
+  background-color: rgba(45, 54, 81, 0.8);
 }
 .btn:hover, .btn:focus {
   background-color: #d66926;
@@ -510,50 +524,138 @@ a {
   gap: 20px;
 }
 
+.skills {
+  padding: 10px;
+}
 .skills__container {
+  margin-bottom: 20px;
   display: grid;
   grid-template-areas: "a1 a1 a2 a3" "a4 a5 a5 a6" "a7 a8 a9 a6";
   grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: 33vh;
+  grid-auto-rows: calc(33.3333vh - 13.3333px);
   gap: 10px;
 }
-
-.skils-item {
-  background-color: blue;
+.skills__actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.skils-item:nth-of-type(1) {
+.skills-item {
+  background-color: #2d3651;
+  position: relative;
+  padding: 20px;
+  overflow: hidden;
+}
+.skills-item__title {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.skills-item__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: color 0.5s;
+  -o-transition: color 0.5s;
+  transition: color 0.5s;
+}
+.skills-item__img {
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  -o-transition: transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+.skills-item__overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(45, 54, 81, 0.8);
+  -webkit-transition: background-color 0.5s;
+  -o-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+}
+.skills-item:hover .skills-item__link {
+  color: #d66926;
+}
+.skills-item:hover .skills-item__overlay {
+  background-color: rgba(45, 54, 81, 0.95);
+}
+.skills-item:hover .skills-item__img {
+  -webkit-transform: scale(1.1, 1.1);
+      -ms-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
+}
+.skills-item:nth-of-type(1), .skills-item:nth-of-type(2), .skills-item:nth-child(8), .skills-item:nth-child(9) {
+  text-transform: uppercase;
+}
+
+.skills-item:nth-of-type(1) {
   grid-area: a1;
 }
 
-.skils-item:nth-of-type(2) {
+.skills-item:nth-of-type(2) {
   grid-area: a2;
 }
 
-.skils-item:nth-of-type(3) {
+.skills-item:nth-of-type(3) {
   grid-area: a3;
 }
 
-.skils-item:nth-of-type(4) {
+.skills-item:nth-of-type(4) {
   grid-area: a4;
 }
 
-.skils-item:nth-of-type(5) {
+.skills-item:nth-of-type(5) {
   grid-area: a5;
 }
 
-.skils-item:nth-of-type(6) {
+.skills-item:nth-of-type(6) {
   grid-area: a6;
 }
 
-.skils-item:nth-of-type(7) {
+.skills-item:nth-of-type(7) {
   grid-area: a7;
 }
 
-.skils-item:nth-of-type(8) {
+.skills-item:nth-of-type(8) {
   grid-area: a8;
 }
 
-.skils-item:nth-of-type(9) {
+.skills-item:nth-of-type(9) {
   grid-area: a9;
 }

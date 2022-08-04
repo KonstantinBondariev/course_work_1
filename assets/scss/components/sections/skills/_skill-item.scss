@@ -1,8 +1,64 @@
-.skils-item {
-  background-color: blue;
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
+.skills-item {
+  background-color: $color-primary;
+  position: relative;
+  padding: $gap;
+  overflow: hidden;
+
+  &__title {
+    z-index: 1;
+    @include abs-position;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__link{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: $gap-sm;
+    justify-content: center;
+    align-items: center;
+    transition: color 0.5s;
+  }
+
+
+  &__img {
+  background-position: center;
+  background-size: cover;
+  @include abs-position;
+  transition: transform 0.5s;
+  }
+
+  &__overlay {
+    @include abs-position;
+    background-color: rgba($color: $color-primary, $alpha: 0.8);
+    transition: background-color 0.5s;
+  }
+  &:hover {
+    .skills-item__link {
+      color: $color-accent;
+    }
+    .skills-item__overlay {
+      background-color: rgba($color: $color-primary, $alpha: 0.95);
+    }
+    .skills-item__img {
+      transform: scale(1.1,1.1);
+    }
+  }
+  &:nth-of-type(1),
+  &:nth-of-type(2),
+  &:nth-child(8),
+  &:nth-child(9) {
+    text-transform: uppercase;
+  }
+
 }
 @for $i from 1 through 9 {
-  .skils-item:nth-of-type(#{$i}) {
+  .skills-item:nth-of-type(#{$i}) {
     grid-area: a#{$i}
   }
 }
+
