@@ -1,9 +1,7 @@
-
 $(document).ready(function () {
-
-  $('.header-navbar__btn').on('click', function () {
-    $(this).toggleClass('active');
-    $('.header-navbar__list').toggleClass('active');
+  $('.header-navbar__btn').click(function () {
+    $(this).toggleClass('open');
+    $('.header-navbar__list').toggleClass('open');
+    $('.header-navbar__item').toggleClass('open');
   });
-
 });

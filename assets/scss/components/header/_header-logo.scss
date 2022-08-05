@@ -9,7 +9,8 @@
   font-weight: 400;
 
   &__link {
-    display: block;
+    display: flex;
+    align-items: center;
 
     padding: $gap 0;
   }

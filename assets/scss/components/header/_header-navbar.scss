@@ -3,20 +3,106 @@
 
 .header-navbar {
   letter-spacing: 0.1em;
-
+  display: flex;
 
   &__btn {
-    display: none;
+    
+    height: 17px;
+    position: relative;
+    margin: 10px 24px 10px 10px;
+    
+    transform: rotate(0deg);
+    
+    transition: .5s ease-in-out;
+    cursor: pointer;
+    width: 24px;
+    z-index: 2;
+    
+    & span {
+      display: block;
+      position: absolute;
+      height: 2px;
+      width: 100%;
+      background: $color-light;
+      border-radius: 1px;
+      opacity: 1;
+      left: 0;
+      transform: rotate(0deg);
+      transition: .25s ease-in-out;
+    }
+    & span:nth-child(1) {
+      top: 0px;
+    }
+    
+    & span:nth-child(2), span:nth-child(3) { //!!!
+      top: 8px;
+    }
+    
+    & span:nth-child(4) {
+      top: 16px;
+    }
+    
+    &.open span:nth-child(1) {
+      top: 6px;
+      width: 0%;
+      left: 50%;
+    }
+    
+    &.open span:nth-child(2) {
+      transform: rotate(45deg);
+    }
+    
+    &.open span:nth-child(3) {
+      
+      transform: rotate(-45deg);
+    }
+    
+    &.open span:nth-child(4) {
+      top: 6px;
+      width: 0%;
+      left: 50%;
+    }
+    @include md-min {
+      display: none;
+    }
+    
   }
+
   &__list {
     display: flex;
-
     margin-right: 10px;
-
+    
+    &.open {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      background-color: $color-primary;
+      animation: fall 0.5s ease-in;
+      @keyframes fall {
+        0% {
+          transform: translateY(-100%);
+        }
+        100% {
+          transform: translateY(0%);
+        }
+      }
+    }
+    
     @include unlist;
+    @include md {
+      display: none;
+      }
+    
   }
   &__item {
     margin: $gap $gap-sm;
+    &.open {
+      margin: 0 $gap;
+    }
   }
   &__link {
     display: block;
@@ -28,6 +114,9 @@
     transition: color 0.5s;
     &:hover  {
       color: $color-accent;
+    }
+    @include md{
+      padding: $gap-sm;
     }
   }
   &__link a {
