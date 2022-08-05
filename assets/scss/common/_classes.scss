@@ -5,7 +5,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 60px;
+  
 
   padding: 0.5em 0.1em;
 
@@ -17,16 +17,32 @@
   font-weight: 400;
   transition: background-color 0.5s;
   &--light {
-    width: 250px;
-    
+
     border: 2px solid $color-light;
     background-color: rgba($color: $color-light, $alpha: 0.1) ;
+    @include lg-min {
+      width: 250px;
+      height: 60px;
+    }
+    @include lg-md {
+      width: 200px;
+      height: 50px;
+    }
+    @include md {
+      width: 170px;
+      height: 40px;
+    }
   }
   &--primary{
-    width: 350px;
-    
     border: 2px solid $color-primary;
-    background-color: rgba($color: $color-primary, $alpha: 0.8) ;
+    background-color: rgba($color: $color-primary, $alpha: 0.8);
+    height: 60px;
+    @include sm-min {
+      width: 350px;
+    }
+    @include sm {
+      max-width: 100%;
+    }
   }
   &:hover,
   &:focus {
