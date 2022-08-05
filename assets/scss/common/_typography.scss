@@ -1,4 +1,5 @@
 @use "../presets" as *;
+@use "../mixins" as *;
 *,
 *::after,
 *::before {
@@ -19,18 +20,34 @@ body {
 h1 {
   margin: 0;
 
-  letter-spacing: 0.08em;
+  
 
   font-family: $font-header;
-  font-size: 3.75rem;
+  
   font-weight: 300;
   line-height: 1.2em;
+  @include lg-min {
+    font-size: 3.75rem;
+    letter-spacing: 0.08em; // !!!!!!
+  }
+  @include lg-md {
+    font-size: 2.5rem;
+    letter-spacing: 0.08em;// !!!!!!
+  }
+  @include lg {
+    font-size: 1.875rem;
+    letter-spacing: 0.08em;// !!!!!!
+  }
 }
 h3 {
   margin: 0;
-  font-size: 1.25rem;
+  font-size: 1rem; 
   font-weight: bold;
   letter-spacing: 0.1em;
+  @include md-min {
+    font-size: 1.25rem;
+  }
+
 }
 a {
   text-decoration: none;
