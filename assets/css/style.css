@@ -506,7 +506,8 @@ a {
 .header-navbar__btn span:nth-child(1) {
   top: 0px;
 }
-.header-navbar__btn span:nth-child(2), .header-navbar__btn span:nth-child(3) {
+.header-navbar__btn span:nth-child(2),
+.header-navbar__btn span:nth-child(3) {
   top: 8px;
 }
 .header-navbar__btn span:nth-child(4) {
@@ -537,48 +538,17 @@ a {
   display: -ms-flexbox;
   display: flex;
   margin-right: 10px;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 .header-navbar__list.open {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  background-color: #2d3651;
-  -webkit-animation: fall 0.5s ease-in;
-          animation: fall 0.5s ease-in;
-}
-@-webkit-keyframes fall {
-  0% {
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
-  }
-  100% {
-    -webkit-transform: translateY(0%);
-            transform: translateY(0%);
-  }
-}
-@keyframes fall {
-  0% {
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
-  }
-  100% {
-    -webkit-transform: translateY(0%);
-            transform: translateY(0%);
-  }
+  -webkit-transform: translateY(0%);
+      -ms-transform: translateY(0%);
+          transform: translateY(0%);
 }
 .header-navbar__item {
   margin: 20px 10px;
@@ -833,7 +803,27 @@ a {
     height: 40px;
   }
   .header-navbar__list {
-    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: rgba(45, 54, 81, 0.9);
+    -webkit-transform: translateY(-100%);
+        -ms-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  .header-navbar__item {
+    margin: 0 20px;
   }
   .header-navbar__link {
     padding: 10px;
