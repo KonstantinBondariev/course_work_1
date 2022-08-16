@@ -43,7 +43,7 @@
       background-color: rgba(255, 255, 255, 0.15);
     }
     &::placeholder {
-      color: rgba($color-gray-dark, $alpha: 1);
+      color: rgba($color-light, $alpha: 0.51);
     }
     &:first-of-type {
       @include md-sm {
