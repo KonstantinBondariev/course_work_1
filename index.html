@@ -167,11 +167,13 @@
     </section>
     <section class="form">
       <!-- <h2></h2> -->
-      <form action="https://tests.fomenko.top/echo/index.php">
-        <input type="text" name="userName" placeholder="Your name...">
-        <input type="email" name="userEmail" placeholder="Your email...">
-        <input type="submit" placeholder="Subscribe">
-      </form>
+      <div class="form__container">
+        <form action="https://tests.fomenko.top/echo/index.php" class="form__form">
+          <input class="form__item" type="text" name="userName" placeholder="Your name...">
+          <input class="form__item" type="email" name="userEmail" placeholder="Your email...">
+          <button class="btn btn--primary" type="submit">Subscribe</button>
+        </form>
+      </div>
     </section>
   </main>
 

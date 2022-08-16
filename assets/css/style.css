@@ -311,7 +311,7 @@ template {
   display: none;
 }
 
-.about__container, .header-content__container, .header-menu__container {
+.form__container, .about__container, .header-content__container, .header-menu__container {
   max-width: 1340px;
   margin: 0 auto;
   padding: 0 20px 0 20px;
@@ -381,7 +381,7 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 0.5em 0.1em;
+  padding: 0.5em 1em;
   letter-spacing: 0.1em;
   font-size: 1.125rem;
   font-weight: 400;
@@ -793,6 +793,63 @@ a {
       -ms-flex-direction: column;
           flex-direction: column;
 }
+
+.form {
+  padding: 30px 0;
+  background-color: #2d3651;
+}
+.form__form {
+  display: grid;
+  gap: 20px;
+}
+.form__item {
+  display: block;
+  width: 100%;
+  height: 60px;
+  padding: 0 30px;
+  color: #637588;
+  background-color: rgba(255, 255, 255, 0.05);
+  -webkit-transition: background-color 0.5s, border-color 0.5s;
+  -o-transition: background-color 0.5s, border-color 0.5s;
+  transition: background-color 0.5s, border-color 0.5s;
+  letter-spacing: 0.15em;
+  color: #ffffff;
+  border: 2px solid rgba(255, 255, 255, 0);
+  border-bottom-color: rgba(255, 255, 255, 0.25);
+  font-size: 1.125rem;
+  outline: none;
+}
+.form__item:hover, .form__item:focus {
+  border-color: rgba(255, 255, 255, 0.15);
+  border-bottom-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+.form__item::-webkit-input-placeholder {
+  color: #44596e;
+}
+.form__item::-moz-placeholder {
+  color: #44596e;
+}
+.form__item:-ms-input-placeholder {
+  color: #44596e;
+}
+.form__item::-ms-input-placeholder {
+  color: #44596e;
+}
+.form__item::placeholder {
+  color: #44596e;
+}
+
+.form .btn--primary {
+  width: 100%;
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0);
+  border-bottom-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.form .btn--primary:hover, .form .btn--primary:focus {
+  background-color: #d66926;
+}
 @media (min-width: 576px) {
   .btn--primary {
     width: 350px;
@@ -815,6 +872,9 @@ a {
   }
   .header-navbar__btn {
     display: none;
+  }
+  .form__form {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 @media (min-width: 992px) {
@@ -946,6 +1006,12 @@ a {
   .article__article p:first-of-type::after {
     right: -20px;
   }
+  .form__form {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .form__item:first-of-type {
+    grid-column: 1/span 2;
+  }
 }
 @media (max-height: 690px) {
   .skills__container {
@@ -980,5 +1046,8 @@ a {
   }
   .article__article p:first-of-type::after {
     display: none;
+  }
+  .form__form {
+    grid-template-columns: repeat(1, 1fr);
   }
 }

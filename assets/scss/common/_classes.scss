@@ -1,29 +1,25 @@
-@use "../presets" as *;
-@use "../mixins" as *;
+@use '../presets' as *;
+@use '../mixins' as *;
 
 .btn {
   display: flex;
   align-items: center;
   justify-content: center;
-  
 
-  padding: 0.5em 0.1em;
+  padding: 0.5em 1em;
 
   letter-spacing: 0.1em;
-
-  
 
   font-size: 1.125rem;
   font-weight: 400;
   transition: background-color 0.5s;
   &--light {
-
     border: 2px solid $color-light;
-    background-color: rgba($color: $color-light, $alpha: 0.1) ;
+    background-color: rgba($color: $color-light, $alpha: 0.1);
     @include lg-min {
       width: 250px;
       height: 60px;
-      }
+    }
     @include lg {
       font-size: 1rem;
     }
@@ -36,7 +32,7 @@
       height: 40px;
     }
   }
-  &--primary{
+  &--primary {
     border: 2px solid $color-primary;
     background-color: rgba($color: $color-primary, $alpha: 0.8);
     height: 60px;
