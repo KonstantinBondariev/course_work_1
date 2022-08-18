@@ -41,9 +41,16 @@
       border-color: rgba(255, 255, 255, 0.15);
       border-bottom-color: $color-light;
       background-color: rgba(255, 255, 255, 0.15);
+      &::placeholder {
+        color: lighten($color-primary, $amount: 50%);
+        opacity: 0.7;
+        font-weight: normal;
+      }
     }
     &::placeholder {
-      color: rgba($color-light, $alpha: 0.51);
+      color: lighten($color-primary, $amount: 50%);
+      opacity: 0.4;
+      font-weight: 400;
     }
     &:first-of-type {
       @include md-sm {

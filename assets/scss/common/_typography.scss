@@ -61,12 +61,13 @@ h2 {
   }
 }
 h3 {
-  margin: 0;
+  color: $color-gray;
+  margin: 1.125rem 0;
   font-size: 1rem;
   font-weight: bold;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.05em;
   @include md-min {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
   }
 }
 a {
