@@ -1,40 +1,56 @@
-@use '../../../presets' as *;
-@use '../../../mixins' as *;
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
 .skills-item {
-  background-color: $color-primary;
   position: relative;
-  padding: $gap;
+
   overflow: hidden;
+
+  padding: $gap;
+
+  background-color: $color-primary;
 
   &__title {
     z-index: 1;
-    @include abs-position;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
+    letter-spacing: 0.1em;
+
+    @include abs-position;
+    @include md-min {
+      font-size: 1.25rem;
+    }
   }
 
   &__link {
     display: flex;
+    align-items: center;
+    justify-content: center;
+
     width: 100%;
     height: 100%;
     padding: $gap-sm;
-    justify-content: center;
-    align-items: center;
+
     transition: color 0.5s;
   }
 
   &__img {
+    transition: transform 0.5s;
+
     background-position: center;
     background-size: cover;
+
     @include abs-position;
-    transition: transform 0.5s;
   }
 
   &__overlay {
-    @include abs-position;
-    background-color: rgba($color: $color-primary, $alpha: 0.8);
     transition: background-color 0.5s;
+
+    background-color: rgba($color: $color-primary, $alpha: 0.8);
+
+    @include abs-position;
   }
   &:hover {
     .skills-item__link {

@@ -5,7 +5,6 @@
   @include lg-min {
     padding: 100px 0;
   }
-
   @include lg-md {
     padding: 80px 0;
   }
@@ -16,9 +15,11 @@
     @extend %container;
   }
   &__grid {
-    padding-bottom: 20px; //!!!!!!!!!!!!!!!!
-    gap: $gap;
     display: grid;
+
+    padding-bottom: 20px; //!!!
+
+    gap: $gap;
     @include lg-min {
       grid-template-areas:
         'p1 p1 p2 p3'
@@ -53,7 +54,7 @@
   &__actions {
     display: flex;
     justify-content: center;
-    margin-bottom: 30px;
+
     @include sm {
       margin-bottom: 0;
     }
@@ -61,12 +62,14 @@
 }
 .posts-item {
   &__link {
-    height: 100%;
     display: grid;
+
+    height: 100%;
+
     grid-template-rows: 300px 1fr;
     &:hover {
       .posts-item__content {
-        background-color: darken($color: #eeeeee, $amount: 10%);
+        background-color: darken($color: #f2f2f2, $amount: 10%);
       }
       .posts-item__title,
       .posts-item__text {
@@ -79,38 +82,47 @@
     }
   }
   &__img {
-    background-color: $color-primary;
     display: flex;
-    justify-content: center;
-    align-items: center;
     overflow: hidden;
+    align-items: center;
+    justify-content: center;
+
+    background-color: $color-primary;
   }
   &__img img {
-    transition: transform 0.5s;
     width: 100%;
     height: 100%;
+
+    transition: transform 0.5s;
+
     object-fit: cover;
   }
   &__content {
-    background-color: #eeeeee;
-    padding: $gap;
     display: flex;
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
     justify-content: center;
+
+    padding: $gap;
+
     transition: background-color 0.5s;
+
+    background-color: #f2f2f2;
   }
   &__title {
     transition: color 0.5s;
     text-align: center;
+
     font-family: 'Roboto Slab', serif;
   }
   &__text {
-    color: $color-gray;
     transition: color 0.5s;
     text-align: center;
+    letter-spacing: 0rem;
+
+    color: $color-gray;
+
     line-height: 1.15;
-    letter-spacing: 0.001em;
   }
 }
 @for $i from 1 through 6 {

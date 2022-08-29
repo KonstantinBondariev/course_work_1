@@ -6,6 +6,7 @@
   top: 0;
   right: 0;
   left: 0;
+
   @include md {
     background-color: rgba(68, 89, 110, 0.25);
     box-shadow: -3px 3px 20px -10px black;
@@ -15,10 +16,7 @@
     align-items: center;
     justify-content: space-between;
 
-    padding-right: 0;
-
     @extend %container;
     gap: $gap;
-
   }
 }
